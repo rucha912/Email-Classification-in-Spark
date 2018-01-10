@@ -1,0 +1,32 @@
+# Group No. : 09
+# Project title: Email Classification using Naive Bayes Approach
+
+Input:
+We are using processed enron email data set for classification. 
+Data set can be found at http://www2.aueb.gr/users/ion/data/enron-spam/
+It contains alreadyed labelled spam and ham emails. 
+
+Algorithm:
+We have implemented two algorithms for classfication. Seperate python code files can be found for same. 
+Logistic Regreesion: logistic_reg.py
+Naive Bayes: naive_bayes.py
+
+Framework:
+Algorithms are implemented using Apache Spark Framework
+Spark framwork: 1.0.6
+Python version: 2.6
+Libraries required: SparkContext, mllib,numpy,scipy etc. 
+
+Execution:
+1. Logistic Regression: spark-submit <source_code_path>
+Input folders are hard coded into the source code.
+There are emails at 'users/rkadam/enron1/spam' and 'users/rkadam/enron1/ham' on the dsba cluster
+2. Naive Bayes:
+   $ spark-submit <source_code_path> <input_folder_path>
+* Here input folder follows structure:  'any_basic_path/train/ham/all_text_files.txt'
+					'any_basic_path/train/spam/all_text_files.txt'
+					'any_basic_path/test/ham/all_text_files.txt'
+					'any_basic_path/test/spam/all_text_files.txt'
+
+Output: 
+Output is displayed on console which includes performance evaluation matrix. 
